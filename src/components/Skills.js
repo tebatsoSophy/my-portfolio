@@ -27,32 +27,127 @@ export const Skills = () => {
             <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <h2>Skills & Technologies</h2>
+                        <p>Here are the programming languages, frameworks, and tools I've worked with throughout my academic journey and personal projects.<br></br> Continuously expanding my skill set to tackle new challenges.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                            {/* Programming Languages */}
                             <div className="item">
-                                <div className="skill-icon">💻</div>
-                                <h5>Web Development</h5>
+                                <div className="skill-icon">🔤</div>
+                                <h5>Java</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🐍</div>
+                                <h5>Python</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">💛</div>
+                                <h5>JavaScript</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">📜</div>
+                                <h5>TypeScript</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">☕</div>
+                                <h5>Kotlin</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">⚡</div>
+                                <h5>C++</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🔷</div>
+                                <h5>C#</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">📄</div>
+                                <h5>HTML5</h5>
                             </div>
                             <div className="item">
                                 <div className="skill-icon">🎨</div>
-                                <h5>Brand Identity</h5>
+                                <h5>CSS3</h5>
                             </div>
                             <div className="item">
-                                <div className="skill-icon">🔍</div>
-                                <h5>Logo Design</h5>
+                                <div className="skill-icon">🛢️</div>
+                                <h5>SQL</h5>
+                            </div>
+
+                            {/* Frontend Technologies */}
+                            <div className="item">
+                                <div className="skill-icon">⚛️</div>
+                                <h5>React</h5>
                             </div>
                             <div className="item">
                                 <div className="skill-icon">📱</div>
-                                <h5>Mobile Development</h5>
+                                <h5>React Native</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🚀</div>
+                                <h5>Next.js</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">💎</div>
+                                <h5>Vue.js</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🎯</div>
+                                <h5>Node.js</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">✨</div>
+                                <h5>Tailwind CSS</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🅱️</div>
+                                <h5>Bootstrap</h5>
+                            </div>
+
+                            {/* Backend & Databases */}
+                            <div className="item">
+                                <div className="skill-icon">🌐</div>
+                                <h5>Spring Boot</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🐘</div>
+                                <h5>PostgreSQL</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🍃</div>
+                                <h5>MongoDB</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">⚡</div>
+                                <h5>Express.js</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🔥</div>
+                                <h5>Firebase</h5>
+                            </div>
+
+                            {/* Tools & Platforms */}
+                            <div className="item">
+                                <div className="skill-icon">📦</div>
+                                <h5>Git & GitHub</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🐳</div>
+                                <h5>Docker</h5>
                             </div>
                             <div className="item">
                                 <div className="skill-icon">☁️</div>
-                                <h5>Cloud Computing</h5>
+                                <h5>AWS</h5>
                             </div>
                             <div className="item">
-                                <div className="skill-icon">📊</div>
-                                <h5>Data Analysis</h5>
+                                <div className="skill-icon">⚙️</div>
+                                <h5>REST APIs</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">🧪</div>
+                                <h5>JUnit</h5>
+                            </div>
+                            <div className="item">
+                                <div className="skill-icon">📐</div>
+                                <h5>Figma</h5>
                             </div>
                         </Carousel>
                     </div>

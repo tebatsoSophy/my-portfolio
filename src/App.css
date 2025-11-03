@@ -1,6 +1,18 @@
 /************ Custom Font ************/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
+/************ Color Variables - Deep Plum + Blush Pink ************/
+:root {
+  --dark-base: #1A0B2E;    /* Deep plum */
+  --dark-card: #25143F;    /* Slightly lighter plum */
+  --accent-1: #E8B4BC;     /* Soft blush pink */
+  --accent-2: #C44569;     /* Deeper berry pink */
+  --accent-glow: #FF6B95;  /* Bright pink for glows */
+  --text-light: #E8D5D8;   /* Soft pinkish white */
+  --text-muted: #A78B9F;   /* Muted lavender gray */
+  --border-color: rgba(232, 180, 188, 0.2);
+}
+
 /************ Default Css ************/
 * {
   margin: 0;
@@ -17,8 +29,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #050505 !important;
-  color: #DADADA !important;
+  background-color: var(--dark-base) !important;
+  color: var(--text-light) !important;
   font-family: 'Inter', sans-serif !important;
 }
 
@@ -61,11 +73,11 @@ input:focus, textarea:focus, select:focus {
 }
 
 p.success {
-	color: #00E5FF;
+	color: var(--accent-1);
 }
 
 p.danger {
-	color: #ff4444;
+	color: #ff6b6b;
 }
 
 /************ Navbar Css ************/
@@ -76,19 +88,19 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition:  0.32s ease-in-out;
-  background-color: rgba(5, 5, 5, 0.95);
+  background-color: rgba(26, 11, 46, 0.95);
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #050505;
-  box-shadow: 0 2px 20px rgba(123, 44, 191, 0.1);
+  background-color: var(--dark-base);
+  box-shadow: 0 2px 20px rgba(232, 180, 188, 0.1);
 }
 nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
-  color: #DADADA !important;
+  color: var(--text-light) !important;
   letter-spacing: 0.8px;
   padding: 0 25px;
   font-size: 18px;
@@ -98,7 +110,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
-    color: #00E5FF !important;
+    color: var(--accent-1) !important;
 }
 span.navbar-text {
     display: flex;
@@ -111,34 +123,34 @@ span.navbar-text {
 .social-icon a {
     width: 42px;
     height: 42px;
-    background: rgba(123, 44, 191, 0.1);
+    background: rgba(232, 180, 188, 0.1);
     display: inline-flex;
     border-radius: 50%;
     margin-right: 6px;
     align-items: center;
     justify-content: center;
     line-height: 1;
-    border: 1px solid rgba(123, 44, 191, 0.3);
+    border: 1px solid rgba(232, 180, 188, 0.3);
     transition: all 0.3s ease;
 }
 .social-icon a:hover {
-    background: rgba(123, 44, 191, 0.2);
-    border-color: #7B2CBF;
+    background: rgba(232, 180, 188, 0.2);
+    border-color: var(--accent-1);
     transform: translateY(-2px);
 }
 .social-icon a img {
 	width: 40%;
 	z-index: 1;
 	transition: 0.3s ease-in-out;
-	filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+	filter: brightness(0) saturate(100%) invert(90%) sepia(10%) saturate(300%) hue-rotate(300deg) brightness(105%) contrast(95%);
 }
 .social-icon a:hover img {
-	filter: brightness(0) saturate(100%) invert(30%) sepia(90%) saturate(1500%) hue-rotate(260deg) brightness(90%) contrast(90%);
+	filter: brightness(0) saturate(100%) invert(80%) sepia(20%) saturate(800%) hue-rotate(300deg) brightness(95%) contrast(85%);
 }
 .navbar-text button {
   font-weight: 700;
-  color: #DADADA;
-  border: 1px solid #7B2CBF;
+  color: var(--text-light);
+  border: 1px solid var(--accent-2);
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
@@ -155,7 +167,7 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background: linear-gradient(45deg, #7B2CBF, #00E5FF);
+  background: linear-gradient(45deg, var(--accent-2), var(--accent-1));
   left: 0;
   top: 0;
   z-index: -1;
@@ -163,7 +175,7 @@ span.navbar-text {
   border-radius: 4px;
 }
 .navbar-text button:hover {
-  color: #050505;
+  color: var(--dark-base);
   border-color: transparent;
 }
 .navbar-text button:hover::before {
@@ -177,7 +189,7 @@ span.navbar-text {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background: linear-gradient(135deg, #050505 0%, #7B2CBF 50%, #00E5FF 100%);
+  background: linear-gradient(135deg, var(--dark-base) 0%, #3D1B5F 50%, var(--accent-2) 100%);
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -191,14 +203,14 @@ span.navbar-text {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(5, 5, 5, 0.7);
+  background: rgba(26, 11, 46, 0.7);
 }
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 12px 20px;
-  background: linear-gradient(45deg, rgba(123, 44, 191, 0.2), rgba(0, 229, 255, 0.2));
-  border: 1px solid rgba(123, 44, 191, 0.3);
+  background: linear-gradient(45deg, rgba(196, 69, 105, 0.2), rgba(232, 180, 188, 0.2));
+  border: 1px solid rgba(196, 69, 105, 0.3);
   font-size: 20px;
   margin-bottom: 20px;
   display: inline-block;
@@ -214,7 +226,7 @@ span.navbar-text {
   line-height: 1.1;
   margin-bottom: 20px;
   display: block;
-  background: linear-gradient(45deg, #DADADA, #00E5FF);
+  background: linear-gradient(45deg, var(--text-light), var(--accent-1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -222,7 +234,7 @@ span.navbar-text {
   z-index: 1;
 }
 .banner p {
-  color: #A0A0A0;
+  color: var(--text-muted);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.6em;
@@ -231,14 +243,14 @@ span.navbar-text {
   z-index: 1;
 }
 .banner button {
-  color: #050505;
+  color: var(--dark-base);
   font-weight: 700;
   font-size: 20px;
   margin-top: 60px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
-  background: linear-gradient(45deg, #7B2CBF, #00E5FF);
+  background: linear-gradient(45deg, var(--accent-2), var(--accent-1));
   padding: 15px 30px;
   border-radius: 30px;
   border: none;
@@ -248,7 +260,7 @@ span.navbar-text {
 }
 .banner button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(123, 44, 191, 0.4);
+  box-shadow: 0 10px 30px rgba(196, 69, 105, 0.4);
 }
 .banner img {
   animation: updown 3s linear infinite;
@@ -267,7 +279,7 @@ span.navbar-text {
     }
 }
 .txt-rotate > .wrap {
-  border-right: 0.08em solid #00E5FF;
+  border-right: 0.08em solid var(--accent-1);
 }
 
 /************ Banner Graphic ************/
@@ -282,9 +294,9 @@ span.navbar-text {
 .code-animation {
   width: 300px;
   height: 200px;
-  background: rgba(123, 44, 191, 0.1);
+  background: rgba(196, 69, 105, 0.1);
   border-radius: 20px;
-  border: 2px solid rgba(0, 229, 255, 0.3);
+  border: 2px solid rgba(232, 180, 188, 0.3);
   padding: 30px;
   position: relative;
   overflow: hidden;
@@ -293,7 +305,7 @@ span.navbar-text {
 
 .code-line {
   height: 8px;
-  background: linear-gradient(90deg, #7B2CBF, #00E5FF);
+  background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
   margin-bottom: 12px;
   border-radius: 4px;
   opacity: 0.7;
@@ -323,11 +335,11 @@ span.navbar-text {
 @keyframes codeGlow {
   0% {
     opacity: 0.4;
-    box-shadow: 0 0 5px rgba(123, 44, 191, 0.3);
+    box-shadow: 0 0 5px rgba(196, 69, 105, 0.3);
   }
   100% {
     opacity: 0.8;
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+    box-shadow: 0 0 20px rgba(232, 180, 188, 0.6);
   }
 }
 
@@ -335,6 +347,7 @@ span.navbar-text {
   position: absolute;
   font-size: 2rem;
   animation: float 6s ease-in-out infinite;
+  color: var(--accent-1);
 }
 
 .element-1 {
@@ -371,28 +384,28 @@ span.navbar-text {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
-  background-color: #050505;
+  background-color: var(--dark-base);
 }
 .skill-bx {
-  background: #1A1A1A;
+  background: var(--dark-card);
   border-radius: 30px;
   text-align: center;
   padding: 80px 50px;
   margin-top: -60px;
-  border: 1px solid rgba(123, 44, 191, 0.1);
+  border: 1px solid var(--border-color);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 .skill h2 {
 	font-size: 45px;
 	font-weight: 700;
-  background: linear-gradient(45deg, #DADADA, #00E5FF);
+  background: linear-gradient(45deg, var(--text-light), var(--accent-1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 20px;
 }
 .skill p {
-    color: #A0A0A0;
+    color: var(--text-muted);
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.6em;
@@ -409,6 +422,7 @@ span.navbar-text {
   font-size: 4rem;
   margin-bottom: 15px;
   transition: all 0.3s ease;
+  color: var(--text-light);
 }
 
 .skill-slider .item {
@@ -419,11 +433,11 @@ span.navbar-text {
 
 .skill-slider .item:hover .skill-icon {
   transform: scale(1.2);
-  filter: brightness(0) saturate(100%) invert(30%) sepia(90%) saturate(1500%) hue-rotate(260deg) brightness(90%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(300deg) brightness(90%) contrast(85%);
 }
 
 .skill-slider .item h5 {
-  color: #DADADA;
+  color: var(--text-light);
   font-size: 18px;
   font-weight: 600;
   margin-top: 15px;
@@ -434,27 +448,27 @@ span.navbar-text {
 }
 
 .skill-slider .item:hover h5 {
-  color: #00E5FF;
+  color: var(--accent-1);
 }
 
 /************ Projects Css ************/
 .project {
   padding: 80px 0;
   position: relative;
-  background: #050505;
+  background: var(--dark-base);
 }
 .project h2 {
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
-  background: linear-gradient(45deg, #DADADA, #7B2CBF);
+  background: linear-gradient(45deg, var(--text-light), var(--accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 20px;
 }
 .project p {
-  color: #A0A0A0;
+  color: var(--text-muted);
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.6em;
@@ -466,9 +480,9 @@ span.navbar-text {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgba(123, 44, 191, 0.1);
+  background-color: rgba(196, 69, 105, 0.1);
   overflow: hidden;
-  border: 1px solid rgba(123, 44, 191, 0.2);
+  border: 1px solid rgba(196, 69, 105, 0.2);
 }
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
@@ -477,7 +491,7 @@ span.navbar-text {
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #DADADA;
+  color: var(--text-light);
   width: 100%;
   font-size: 17px;
   letter-spacing: 0.8px;
@@ -492,7 +506,7 @@ span.navbar-text {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(45deg, #7B2CBF, #00E5FF);
+    background: linear-gradient(45deg, var(--accent-2), var(--accent-1));
     top: 0;
     left: 0;
     z-index: -1;
@@ -502,19 +516,19 @@ span.navbar-text {
     width: 100% !important;
 }
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(0, 229, 255, 0.5);
-    color: #050505;
+    border: 1px solid rgba(232, 180, 188, 0.5);
+    color: var(--dark-base);
 }
 .nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(123, 44, 191, 0.3);
+  border: 1px solid rgba(196, 69, 105, 0.3);
   border-radius: 55px 0px 0px 55px;
 }
 .nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(123, 44, 191, 0.3);
-  border-bottom: 1px solid rgba(123, 44, 191, 0.3);
+  border-top: 1px solid rgba(196, 69, 105, 0.3);
+  border-bottom: 1px solid rgba(196, 69, 105, 0.3);
 }
 .nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(123, 44, 191, 0.3);
+  border: 1px solid rgba(196, 69, 105, 0.3);
   border-radius: 0 55px 55px 0;
 }
 
@@ -524,19 +538,20 @@ span.navbar-text {
   justify-content: center;
   align-items: center;
   height: 200px;
-  background: #1A1A1A;
+  background: var(--dark-card);
   border-radius: 20px;
-  border: 1px solid rgba(123, 44, 191, 0.2);
+  border: 1px solid var(--border-color);
 }
 
 .icon-wrapper {
   font-size: 4rem;
   transition: all 0.3s ease;
+  color: var(--text-light);
 }
 
 .proj-imgbx:hover .icon-wrapper {
   transform: scale(1.2) rotate(5deg);
-  filter: brightness(0) saturate(100%) invert(30%) sepia(90%) saturate(1500%) hue-rotate(260deg) brightness(90%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(70%) sepia(30%) saturate(500%) hue-rotate(300deg) brightness(90%) contrast(85%);
 }
 
 .proj-imgbx {
@@ -544,16 +559,16 @@ span.navbar-text {
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 24px;
-  border: 1px solid rgba(123, 44, 191, 0.2);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
 }
 .proj-imgbx:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(123, 44, 191, 0.3);
+  box-shadow: 0 20px 40px rgba(196, 69, 105, 0.3);
 }
 .proj-imgbx::before {
   content: "";
-  background: linear-gradient(45deg, rgba(123, 44, 191, 0.8), rgba(0, 229, 255, 0.8));
+  background: linear-gradient(45deg, rgba(196, 69, 105, 0.8), rgba(232, 180, 188, 0.8));
   opacity: 0;
   position: absolute;
   width: 100%;
@@ -584,7 +599,7 @@ span.navbar-text {
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
-  color: #050505;
+  color: var(--dark-base);
   margin-bottom: 10px;
 }
 .proj-txtx span {
@@ -592,7 +607,7 @@ span.navbar-text {
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
-  color: #050505;
+  color: var(--dark-base);
 }
 
 .tech-stack {
@@ -604,23 +619,23 @@ span.navbar-text {
 }
 
 .tech-tag {
-  background: rgba(123, 44, 191, 0.1);
-  color: #7B2CBF;
+  background: rgba(196, 69, 105, 0.1);
+  color: var(--accent-2);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 12px;
-  border: 1px solid rgba(123, 44, 191, 0.3);
+  border: 1px solid rgba(196, 69, 105, 0.3);
   transition: all 0.3s ease;
 }
 
 .tech-tag:hover {
-  background: rgba(123, 44, 191, 0.2);
+  background: rgba(196, 69, 105, 0.2);
   transform: translateY(-2px);
 }
 
 /************ Contact Css ************/
 .contact {
-  background: linear-gradient(135deg, #7B2CBF 0%, #00E5FF 100%);
+  background: linear-gradient(135deg, var(--accent-2) 0%, var(--accent-1) 100%);
   padding: 60px 0 200px 0;
   position: relative;
 }
@@ -628,14 +643,14 @@ span.navbar-text {
 	font-size: 45px;
 	font-weight: 700;
   margin-bottom: 30px;
-  color: #050505;
+  color: var(--dark-base);
 }
 .contact form input, .contact form textarea {
   width: 100%;
-  background: rgba(26, 26, 26, 0.9);
-  border: 1px solid rgba(26, 26, 26, 0.5);
+  background: rgba(37, 20, 63, 0.9);
+  border: 1px solid rgba(37, 20, 63, 0.5);
   border-radius: 15px;
-  color: #DADADA;
+  color: var(--text-light);
   margin: 0 0 15px 0;
   padding: 18px 26px;
   font-weight: 500;
@@ -644,24 +659,24 @@ span.navbar-text {
   transition: 0.3s ease-in-out;
 }
 .contact form input:focus, .contact form textarea:focus {
-  background: rgba(26, 26, 26, 1);
-  color: #DADADA;
-  border-color: #00E5FF;
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+  background: var(--dark-card);
+  color: var(--text-light);
+  border-color: var(--accent-1);
+  box-shadow: 0 0 20px rgba(232, 180, 188, 0.3);
 }
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: #A0A0A0;
+  color: var(--text-muted);
 }
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
-  color: #DADADA;
+  color: var(--text-light);
   opacity: 0.8;
 }
 .contact form button {
   font-weight: 700;
-  color: #050505;
-  background-color: #DADADA;
+  color: var(--dark-base);
+  background-color: var(--text-light);
   padding: 16px 48px;
   font-size: 18px;
   margin-top: 25px;
@@ -671,10 +686,10 @@ span.navbar-text {
   border: none;
 }
 .contact form button:hover {
-  color: #DADADA;
-  background: #050505;
+  color: var(--text-light);
+  background: var(--dark-base);
   transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(5, 5, 5, 0.3);
+  box-shadow: 0 10px 30px rgba(26, 11, 46, 0.3);
 }
 
 /************ Contact Info ************/
@@ -686,7 +701,7 @@ span.navbar-text {
   background: rgba(255, 255, 255, 0.05);
   padding: 30px;
   border-radius: 20px;
-  border: 1px solid rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(232, 180, 188, 0.1);
 }
 
 .contact-info {
@@ -695,29 +710,29 @@ span.navbar-text {
 
 .info-item {
   margin-bottom: 15px;
-  color: #DADADA;
+  color: var(--text-light);
   font-size: 16px;
 }
 
 .info-item strong {
-  color: #00E5FF;
+  color: var(--accent-1);
   margin-right: 10px;
 }
 
 /************ Newsletter ************/
 .newsletter {
   padding: 50px 0;
-  background: #050505;
+  background: var(--accent-2);
 }
 
 .newsletter-bx {
-  background: #1A1A1A;
+  background: var(--dark-card);
   border-radius: 30px;
-  color: #DADADA;
+  color: var(--text-light);
   padding: 60px 80px;
   margin-bottom: 80px;
   margin-top: -122px;
-  border: 1px solid rgba(123, 44, 191, 0.2);
+  border: 1px solid var(--border-color);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 2;
@@ -726,24 +741,24 @@ span.navbar-text {
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1.2em;
-  background: linear-gradient(45deg, #DADADA, #00E5FF);
+  background: linear-gradient(45deg, var(--text-light), var(--accent-1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 .new-email-bx {
-  background: #2A2A2A;
+  background: #2A1B3F;
   padding: 8px;
   border-radius: 20px;
   position: relative;
   z-index: 0;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(123, 44, 191, 0.3);
+  border: 1px solid rgba(196, 69, 105, 0.3);
 }
 .new-email-bx::before {
   content: "";
-  background: linear-gradient(45deg, #7B2CBF, #00E5FF);
+  background: linear-gradient(45deg, var(--accent-2), var(--accent-1));
   border-radius: 20px;
   position: absolute;
   z-index: -1;
@@ -754,7 +769,7 @@ span.navbar-text {
 }
 .new-email-bx input {
   width: 100%;
-  color: #DADADA;
+  color: var(--text-light);
   font-weight: 500;
   background: transparent;
   border: 0;
@@ -762,9 +777,9 @@ span.navbar-text {
   font-size: 16px;
 }
 .new-email-bx button {
-  background: linear-gradient(45deg, #7B2CBF, #00E5FF);
+  background: linear-gradient(45deg, var(--accent-2), var(--accent-1));
   padding: 18px 50px;
-  color: #050505;
+  color: var(--dark-base);
   font-weight: 600;
   letter-spacing: 0.5px;
   border-radius: 15px;
@@ -773,7 +788,7 @@ span.navbar-text {
 }
 .new-email-bx button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(123, 44, 191, 0.4);
+  box-shadow: 0 10px 25px rgba(196, 69, 105, 0.4);
 }
 
 .newsletter-message {
@@ -785,27 +800,27 @@ span.navbar-text {
 }
 
 .newsletter-message.success {
-  background: rgba(0, 229, 255, 0.1);
-  color: #00E5FF;
-  border: 1px solid rgba(0, 229, 255, 0.3);
+  background: rgba(232, 180, 188, 0.1);
+  color: var(--accent-1);
+  border: 1px solid rgba(232, 180, 188, 0.3);
 }
 
 .newsletter-message.sending {
-  background: rgba(123, 44, 191, 0.1);
-  color: #7B2CBF;
-  border: 1px solid rgba(123, 44, 191, 0.3);
+  background: rgba(196, 69, 105, 0.1);
+  color: var(--accent-2);
+  border: 1px solid rgba(196, 69, 105, 0.3);
 }
 
 /************ Footer Css ************/
 .footer {
-  background: #050505;
+  background: var(--dark-base);
   padding: 40px 0;
-  border-top: 1px solid rgba(123, 44, 191, 0.2);
+  border-top: 1px solid rgba(196, 69, 105, 0.2);
 }
 .footer p {
   font-weight: 400;
   font-size: 14px;
-  color: #A0A0A0;
+  color: var(--text-muted);
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
@@ -817,19 +832,19 @@ span.navbar-text {
   background: transparent;
   border: none;
   margin-right: 20px;
-  color: #DADADA;
+  color: var(--text-light);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .footer .social-icon a:hover {
-  color: #00E5FF;
+  color: var(--accent-1);
   transform: translateY(-2px);
 }
 
 .footer-logo h3 {
-  background: linear-gradient(45deg, #DADADA, #7B2CBF);
+  background: linear-gradient(45deg, var(--text-light), var(--accent-2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -838,11 +853,11 @@ span.navbar-text {
 
 /* Additional modern touches */
 .glow-text {
-  text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+  text-shadow: 0 0 20px rgba(232, 180, 188, 0.5);
 }
 
 .glow-box {
-  box-shadow: 0 0 30px rgba(123, 44, 191, 0.3);
+  box-shadow: 0 0 30px rgba(196, 69, 105, 0.3);
 }
 
 /* Smooth transitions for all interactive elements */

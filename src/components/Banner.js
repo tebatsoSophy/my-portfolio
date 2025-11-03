@@ -10,7 +10,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Full Stack Engineer", "UI/UX Designer", "Software Engineer" ];
+  const toRotate = [ "Web Developer", "Full Stack Engineer", "UI/UX Designer", "Software Engineer","Software Developer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -55,9 +55,11 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Tebatso`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Full Stack Engineer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I'm a passionate developer specializing in creating digital experiences that are both beautiful and functional. With expertise in modern web technologies, I bring ideas to life through clean code and innovative solutions.</p>
-                  <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
+                <h1>{`Hi! I'm Tebatso Mahlathini`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Full Stack Engineer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>A final year BSc Information and Knowledge Systems student at University of Pretoria who actively seeks out new challenges and complex problems to solve.
+                    My studies comprise a primary focus in computer science with complementary expertise in Multimedia and Informatics.
+                     Because of this broad academic foundation, I can work in both frontend and backend development, creating cohesive digital solutions.</p>
+                  <button onClick={() => console.log('downloaded')}>Download my CV <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
