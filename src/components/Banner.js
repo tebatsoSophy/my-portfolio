@@ -4,6 +4,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
+
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -46,6 +47,15 @@ export const Banner = () => {
     }
   }
 
+  const downloadCV = () => {
+  const link = document.createElement('a');
+    link.href ='/tebatso_mahlathini.pdf';
+    link.download = 'tebatso_mahlathini(cv).pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -59,7 +69,7 @@ export const Banner = () => {
                   <p>A final year BSc Information and Knowledge Systems student at University of Pretoria who actively seeks out new challenges and complex problems to solve.
                     My studies comprise a primary focus in computer science with complementary expertise in Multimedia and Informatics.
                      Because of this broad academic foundation, I can work in both frontend and backend development, creating cohesive digital solutions.</p>
-                  <button onClick={() => console.log('downloaded')}>Download my CV <ArrowRightCircle size={25} /></button>
+                  <button onClick={downloadCV}>Download my CV <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>
           </Col>
