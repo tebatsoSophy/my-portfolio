@@ -50,7 +50,7 @@ export const Banner = () => {
   const downloadCV = () => {
   const link = document.createElement('a');
     link.href ='/tebatso_mahlathini.pdf';
-    link.download = 'tebatso_mahlathini(cv).pdf'; 
+  
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
