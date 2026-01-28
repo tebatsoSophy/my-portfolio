@@ -49,7 +49,7 @@ export const Banner = () => {
 
   const downloadCV = () => {
   const link = document.createElement('a');
-    link.href ='/tebatso_mahlathini.pdf';
+    link.href ='/cv kemp.pdf';
   
     document.body.appendChild(link);
     link.click();
@@ -66,7 +66,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Tebatso Mahlathini`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Full Stack Engineer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>A final year BSc Information and Knowledge Systems student at University of Pretoria who actively seeks out new challenges and complex problems to solve.
+                  <p>A BSc in Information Technology in Information and Knowledge Systems graduate from the University of Pretoria who actively seeks out new challenges and complex problems to solve.
                     My studies comprise a primary focus in computer science with complementary expertise in Multimedia and Informatics.
                      Because of this broad academic foundation, I can work in both frontend and backend development, creating cohesive digital solutions.</p>
                   <button onClick={downloadCV}>Download my CV <ArrowRightCircle size={25} /></button>

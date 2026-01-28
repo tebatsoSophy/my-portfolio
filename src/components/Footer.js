@@ -1,24 +1,24 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { Newsletter } from "./Newsletter";
+
 
 export const Footer = () => {
   return (
     <footer className="footer">
-      <Newsletter />
+     
       <Container>
         <Row className="align-items-center">
           <Col size={12} sm={6}>
             <div className="footer-logo">
-              <h3>Tebatso</h3>
+              <h3>Tebatso Sophy</h3>
             </div>
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><span>LinkedIn</span></a>
-              <a href="#"><span>GitHub</span></a>
-              <a href="#"><span>Twitter</span></a>
+              <a href="https://www.linkedin.com/in/tebatso-mahlathini-30864b256/"><span>LinkedIn</span></a>
+              <a href="https://github.com/tebatsoSophy"><span>GitHub</span></a>
+             
             </div>
-            <p>Copyright 2024. All Rights Reserved</p>
+            <p>Copyright 2025. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
