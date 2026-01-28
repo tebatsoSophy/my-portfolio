@@ -6,6 +6,7 @@ import TrackVisibility from 'react-on-screen';
 
   const toRotate = [ "Web Developer", "Full Stack Engineer", 
     "UI/UX Designer", "Software Engineer","Software Developer" ];
+
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -35,7 +36,7 @@ export const Banner = () => {
     }
     
     // Removed setIndex calls since index wasn't being used
-  }, [loopNum, isDeleting, text, toRotate, period]); // Added all dependencies
+  }, [loopNum, isDeleting, text, period]); // Added all dependencies
 
   useEffect(() => {
     let ticker = setInterval(tick, delta);
