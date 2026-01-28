@@ -9,11 +9,9 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1); // Added `index` back
+ 
   const toRotate = [ "Web Developer", "Full Stack Engineer", "UI/UX Designer", "Software Engineer","Software Developer" ];
   const period = 2000;
-
-  // Wrap tick in useCallback to stabilize it
   const tick = useCallback(() => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
